@@ -1,0 +1,25 @@
+{
+  "name": "tibetan-lipsum",
+  "version": "0.0.1",
+  "description": "tibetan lorem ipsum",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/karmapa/tibetan-lipsum.git"
+  },
+  "keywords": [
+    "tibetan",
+    "lorem",
+    "ipsum",
+    "lipsum"
+  ],
+  "author": "karmapa",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/karmapa/tibetan-lipsum/issues"
+  },
+  "homepage": "https://github.com/karmapa/tibetan-lipsum#readme"
+}
