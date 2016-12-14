@@ -1,10 +1,3 @@
-//r_super1 = /^([གདབམའ]?)(ར)([ྐྒྔྕྗྙྟྡྣྦྨྫ])([ྭྱྲླཱ]*?)([ིེཻོཽུ]*?)([གངདནབམའརལས]?)([དས]?)$/;
-//r_super2 = /^([གདབམའ]?)(ལ)([ྐྒྔྕྗྟྡྤྦྷ])([ྭྱྲླཱ]*?)([ིེཻོཽུ]*?)([གངདནབམའརལས]?)([དས]?)$/;
-//r_super3 = /^([གདབམའ]?)(ས)([ྐྒྔྙྟྡྣྤྦྨྩ])([ྭྱྲླཱ]*?)([ིེཻོཽུ]*?)([གངདནབམའརལས]?)([དས]?)$/;
-//r_only2 = /^([ཀཁགངཅཆཇཉཏཐདནཔཕབམཙཚཛཝཞཟའཡརལཤསཧཨ])([གངདནབམའརལས]?)$/;
-//r_only3up = /^([གདབམའ]?)([ཀཁགངཅཆཇཉཏཐདནཔཕབམཙཚཛཝཞཟའཡརལཤསཧཨ])([གངདནབམའརལས]?)([དས]?)$/;
-//r_vowel_sub = /^([གདབམའ]?)([ཀཁགངཅཆཇཉཏཐདནཔཕབམཙཚཛཝཞཟའཡརལཤསཧཨ])([ྭྱྲླཱ]*?)([ིེཻོཽུ]*?)([གངདནབམའརལས]?)([དས]?)$/;
-
 const pre = ['ག', 'ད', 'བ', 'མ', 'འ', ''];
 const sup = ['ར', 'ལ', 'ས'];
 const root1 = ['ྐ', 'ྒ', 'ྔ', 'ྗ', 'ྙ', 'ྟ', 'ྡ', 'ྣ', 'ྦ', 'ྨ', 'ྫ'];
@@ -20,8 +13,6 @@ Array.prototype.randomElement = function () {
 }
 
 const genLipsumSylArr = [genLipsumSyl1, genLipsumSyl2, genLipsumSyl3, genLipsumSyl4, genLipsumSyl5, genLipsumSyl6];
-
-console.log(genLipsumText(process.argv[2] || 8));
 
 function genLipsumText(count) {
   let arr = [];
@@ -79,3 +70,7 @@ function genLipsumSyl6() {
     post.randomElement() + ppost.randomElement();
   return syl;
 }
+
+module.exports = {
+  genLipsumText: genLipsumText
+};
