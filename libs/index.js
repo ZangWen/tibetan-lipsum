@@ -11,25 +11,35 @@ const root1 = ['ྐ', 'ྒ', 'ྔ', 'ྕ', 'ྗ', 'ྙ', 'ྟ', 'ྡ', 'ྣ', '�
 const root2 = ['ྐ', 'ྒ', 'ྔ', 'ྕ', 'ྗ', 'ྟ', 'ྡ', 'ྤ', 'ྦ', 'ྷ'];
 const root3 = ['ྐ', 'ྒ', 'ྔ', 'ྙ', 'ྟ', 'ྡ', 'ྣ', 'ྤ', 'ྦ', 'ྨ', 'ྩ'];
 const root4 = ['ཀ', 'ཁ', 'ག', 'ང', 'ཅ', 'ཆ', 'ཇ', 'ཉ', 'ཏ', 'ཐ', 'ད', 'ན', 'པ', 'ཕ', 'བ', 'མ', 'ཙ', 'ཚ', 'ཛ', 'ཝ', 'ཞ', 'ཟ', 'འ', 'ཡ', 'ར', 'ལ', 'ཤ', 'ས', 'ཧ', 'ཨ'];
-const sub = ['ེ', 'ཻ', 'ོ', 'ཽ', ''];
+const sub = ['ེ', 'ཻ', 'ོ', 'ཽ', '', '', '', '', ''];
 const post = ['ག', 'ང', 'ད', 'ན', 'བ', 'མ', 'འ', 'ར', 'ལ', 'ས', ''];
 const ppost = ['ད', 'ས', ''];
 
 Array.prototype.randomElement = function () {
+  console.log(Math.floor(Math.random() * this.length));
   return this[Math.floor(Math.random() * this.length)];
 }
 
-const genLipsumSylArr = [genLipsumSyl1(), genLipsumSyl2(), genLipsumSyl3(), genLipsumSyl4(), genLipsumSyl5(), genLipsumSyl6()];
+const genLipsumSylArr = [genLipsumSyl1, genLipsumSyl2, genLipsumSyl3, genLipsumSyl4, genLipsumSyl5, genLipsumSyl6];
 
-console.log(genLipsumSentence());
+console.log(genLipsumText(8));
+
+function genLipsumText(count) {
+  let arr = [];
+  for(let i = 0; i < count; i++) {
+    arr.push(genLipsumSentence());
+  }
+  const text = arr.join(' ');
+  return text;
+}
 
 function genLipsumSentence() {
-  let sentence = '།';
+  let arr = [];
   const sylCounts = Math.floor(Math.random() * 17) + 3; //sentence between 3 and 20 syl
   for(let i = 1; i <= sylCounts; i++) {
-    sentence += genLipsumSylArr.randomElement() + '་';
+    arr.push(genLipsumSylArr.randomElement()());
   }
-  sentence += '།';
+  const sentence = '།' + arr.join('་') + '།';
   return sentence;
 }
 
