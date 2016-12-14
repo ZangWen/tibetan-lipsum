@@ -16,7 +16,6 @@ const post = ['ག', 'ང', 'ད', 'ན', 'བ', 'མ', 'འ', 'ར', 'ལ', '�
 const ppost = ['ད', 'ས', ''];
 
 Array.prototype.randomElement = function () {
-  console.log(Math.floor(Math.random() * this.length));
   return this[Math.floor(Math.random() * this.length)];
 }
 
