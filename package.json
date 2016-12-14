@@ -2,7 +2,7 @@
   "name": "tibetan-lipsum",
   "version": "0.0.1",
   "description": "tibetan lorem ipsum",
-  "main": "./libs/index.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -18,6 +18,15 @@
   ],
   "author": "karmapa",
   "license": "MIT",
+  "dependencies": {
+    "babel-core": "6.11.4",
+    "babel-loader": "6.2.4",
+    "babel-plugin-transform-decorators-legacy": "1.3.4",
+    "babel-polyfill": "6.9.1",
+    "babel-preset-es2015": "6.9.0",
+    "babel-preset-stage-0": "6.5.0",
+    "babel-register": "6.11.5"
+  },
   "bugs": {
     "url": "https://github.com/karmapa/tibetan-lipsum/issues"
   },
