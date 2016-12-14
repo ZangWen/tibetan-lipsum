@@ -21,7 +21,7 @@ Array.prototype.randomElement = function () {
 
 const genLipsumSylArr = [genLipsumSyl1, genLipsumSyl2, genLipsumSyl3, genLipsumSyl4, genLipsumSyl5, genLipsumSyl6];
 
-console.log(genLipsumText(8));
+console.log(genLipsumText(process.argv[2] || 8));
 
 function genLipsumText(count) {
   let arr = [];
