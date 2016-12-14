@@ -3,7 +3,11 @@
   "version": "0.0.1",
   "description": "tibetan lorem ipsum",
   "main": "index.js",
+  "bin": {
+    "gen-lipsum": "node index.js"
+  },
   "scripts": {
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
