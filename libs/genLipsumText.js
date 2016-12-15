@@ -15,9 +15,9 @@ Array.prototype.randomElement = function () {
 const genLipsumSylArr = [genLipsumSyl1, genLipsumSyl2, genLipsumSyl3, genLipsumSyl4, genLipsumSyl5, genLipsumSyl6];
 
 function genLipsumText(count) {
-  count = (count / 1) || 8;
+  const sentenceCount = count = (count / 1) || 8;
   let arr = [];
-  for(let i = 0; i < count; i++) {
+  for(let i = 0; i < sentenceCount; i++) {
     arr.push(genLipsumSentence());
   }
   const text = arr.join(' ');
